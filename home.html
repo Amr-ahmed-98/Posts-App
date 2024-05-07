@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Posts</title>
+</head>
+<body onload="DisplayData()">
+    <div class="container">
+        <nav class="bg-light my-3 rounded-2 px-5">
+            <div class="d-flex justify-content-between align-items-center" id="hello">
+                <div class="pt-3" id="userName"></div>
+            <div> <button type="button" id="btnLogout" class="btn btn-primary"> <a href="#" class="text-white text-decoration-none fs-5">Logout</a> </button> </div>
+        </nav>
+    </div>
+    <div class="container my-5">
+        <div class="header-title"> 
+            <h2 class="text-white text-center fs-1 fw-bold border-white"> Write your thoughts down here </h2>
+        </div>
+        <div class="form">
+            <textarea class="form-control mx-auto w-75 fs-4" id="textareaData" rows="2"></textarea>
+            <div class="text-center mt-3">
+                <button type="button" class="btn btn-lg btn-outline-light w-25 mx-4 " id="postBtn">Post</button>
+                <button type="button" class="btn btn-lg btn-outline-light w-25 mx-4 d-none" id="editBtn">Edit</button>
+                <button type="button" class="btn btn-lg btn-outline-light w-25" id="generateBtn">Generate Random Thought</button>
+            </div>
+            <input class="form-control mx-auto w-75 fs-4 my-3" id="~" placeholder="Search For Posts" type="text">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-3 " id="posts">
+        </div>
+    </div>
+
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

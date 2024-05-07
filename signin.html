@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SignIn</title>
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100"
+    >
+      <div class="card mb-3 w-100">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="images/bgsignin.png"
+              class="img-fluid rounded-start"
+              alt="hello img"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title fs-1">SignIn Here to see your posts</h5>
+              <div class="alert alert-danger w-75 d-none fs-5" id="signInAlert" role="alert">
+                this account does not exist please <a href="signup.html" class="text-decoration-none text-danger fw-bold on-hover">SignUp</a> or your password isn't correct
+              </div>
+              <div class="input-group">
+              <div class="form-floating my-3">
+                <input
+                  type="email"
+                  class="form-control w-75"
+                  id="emailInput"
+                  placeholder="name@example.com"
+                  oninput="validateData(emailValidate, this)"
+                />
+                <label for="emailInput">Email address</label>
+              </div>
+              <div class="invalid-feedback d-none fs-5 fw-bold">
+                Remember to include an ‘@’ and a ‘.’ in your email address
+              </div>
+              </div>
+              <div class="input-group">
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control w-75"
+                  id="passwordInput"
+                  placeholder="Password"
+                  oninput="validateData(passwordValidate, this)"
+                />
+                <label for="passwordInput">Password</label>
+              </div>
+              <div class="invalid-feedback d-none fs-5 fw-bold">
+                password should be at least 8 characters long and should include at least one number and one special character
+               </div>
+              </div>
+              <div class="fw-bold mt-3 fs-5"> you don't have account ? <a href="signup.html" class="text-decoration-none text-black on-hover">SignUp</a> </div>
+               <div class="text-center w-75">
+                <button type="button" id="btnSignIn" class="btn btn-primary mt-5 px-5 fs-5  fw-bold">
+                    Submit
+                  </button>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/all.min.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

@@ -118,15 +118,7 @@ if(textareaInput.value != ''){
 }
   })
 
-  if(btnGenerate != null)
-  btnGenerate.addEventListener('click',async () =>{
-    if(await generateRandomQuote() != undefined){
-    textareaInput.value = await generateRandomQuote();
-  }else{
-    textareaInput.value = ''
-  }
-})
-
+ 
 
 // ----------- Display Data ---------------
   const pElement = document.createElement('p');
@@ -288,3 +280,12 @@ const generateRandomQuote = async () => {
      alert(`You don't have Internet connection`);
   }
 }
+
+if(btnGenerate != null)
+  btnGenerate.addEventListener('click',async () =>{
+    if(await generateRandomQuote() != undefined){
+    textareaInput.value = await generateRandomQuote();
+  }else{
+    textareaInput.value = ''
+  }
+})

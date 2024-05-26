@@ -217,6 +217,7 @@ btnEdit.addEventListener('click',function(){
 // ----------- Search Data --------------
 let searchedObj;
 let inputLength;
+if(searchInput != null)
 searchInput.addEventListener('input',function(){
   const currentSearch = searchInput.value;
   inputLength = currentSearch.length
